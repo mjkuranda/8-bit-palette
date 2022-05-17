@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cccccc;
+    height: 100vh;
+}
+
+:root {
+    --paletteX: 16;
+    --paletteY: 16;
+    --col-size: 16px; /* color size*/
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+}
+
+#palette-container {
+    margin: auto;
+    padding: 2em;
+    border-radius: 2em;
+    border: 0.5em outset grey;
+    background-color: grey;
+}
+
+#color-selected,
+#color-id,
+#credits {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+#palette {
+    width: calc(var(--paletteX) * var(--col-size));
+    height: calc(var(--paletteY) * var(--col-size));
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    margin: auto;
+}
+
+#title {
+    margin-bottom: 1em;
+    font-style: italic;
+}
+
+#credits {
+    font-style: italic;
+}
+
+.color {
+    width: var(--col-size);
+    height: var(--col-size);
+}
+.color:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.clicked {
+    opacity: 0.5;
+}
